@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>NES Emulator</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <link rel="stylesheet" href="CSS/Rom%20Upload.css">
+  <script type="text/javascript" src="https://unpkg.com/jsnes/dist/jsnes.min.js"></script>
+  <script type="text/javascript" src="JS/Emulator.js"></script>
+  <script>
+    window.onload = async function () {
+      await fetch('./nestime.json').then(function (data) {
+        return data.json();
+      }).then(function (newJson) {
+        curReward = newJson.reward;
+        document.getElementById("timeCounter").innerHTML = `TIME LEFT: ${curReward}`;
+      });
+    }
+
+    setInterval(async function f() {
+      document.getElementById("timeCounter").innerHTML = `TIME LEFT: ${curReward}`;
+    }, 2 * 1000);
+  </script>
+</head>
+
+<body>
+<h2 id="timeCounter"></h2>
+<div style="display: flex; flex-direction: column; transform: translateY(1%); margin: auto; width: 85.3333vh; height: 80vh;" id="Emulator">
+  <div class="drop-zone" id="drop-zone_id">
+    <span class="drop-zone_prompt">Drop ROM here or click to upload</span>
+    <input type="file" name="myFile" class="drop-zone_input">
+  </div>
+</div>
+<script src="JS/Rom%20Upload.js"></script>
+
+
+</body>
+</html>

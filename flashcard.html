@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flash Card</title>
+  <link rel="stylesheet" href="CSS/Flashcard.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+  <script src="JS/Flashcard.js"></script>
+</head>
+<body>
+<div id="flashcard-form">
+  <form>
+    <div style="padding-top: 0.5vh; padding-left: 1vw">
+      <h3>Add Flash Card</h3>
+      <hr>
+
+      <label for="Question"><b>Question: </b></label>
+      <input type="text" placeholder="Enter Question" id="Question" required>
+
+      <label for="Answer" style="margin-left: 3vw"><b>Answer: </b></label>
+      <input type="text" placeholder="Enter Answer" id="Answer" required>
+      <hr>
+
+      <button type="button" id="submitButton">Add</button>
+    </div>
+  </form>
+</div>
+<br>
+
+<div id="flashcard-spot" style="display: grid; grid-template-columns: 1fr 1fr 1fr 1fr 1fr; grid-auto-flow: row;">
+
+</div>
+</body>
+</html>

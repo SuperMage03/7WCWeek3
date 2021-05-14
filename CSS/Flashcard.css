@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: beige;
+}
+
+#flashcard-form {
+    height: 40vh;
+    background-color: cadetblue;
+    border-radius: 10px;
+}
+
+.flashcard {
+    display: inline-block;
+    background: pink;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 15px;
+    font-family: inherit;
+    word-wrap: normal;
+}
+
+input[type=text] {
+    width: 30vw;
+    padding: 2vw;
+    margin: 1vh 0 3vh 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+}
+
+input[type=text]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 2vh;
+}
+
+#submitButton{
+    background-color: #4CAF50;
+    color: white;
+    padding: 2vh 3vw;
+    margin: 0.2vh 16vw;
+    border: none;
+    cursor: pointer;
+    width: 60%;
+    opacity: 0.9;
+}
+
+#submitButton:hover {
+    opacity: 1;
+}

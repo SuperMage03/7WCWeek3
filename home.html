@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HOME PAGE</title>
+    <link rel="stylesheet" href="CSS/Home.css">
+    <script>
+        window.onload = async function () {
+            let timeCounter = document.getElementById("timeCounter");
+            await fetch('./nestime.json').then(function (data) {
+                return data.json().then(function (newJson) {
+                    timeCounter.innerHTML = `NES TIME: ${newJson.reward}`;
+                })
+            })
+        };
+
+        setInterval(async function () {
+            let timeCounter = document.getElementById("timeCounter");
+            await fetch('./nestime.json').then(function (data) {
+                return data.json().then(function (newJson) {
+                    timeCounter.innerHTML = `NES TIME: ${newJson.reward}`;
+                })
+            })
+        }, 4 * 1000);
+    </script>
+</head>
+<body>
+<div id="container">
+    <header>
+        <h1 style="transform: translateX(60%)"><b>Home Page</b></h1>
+    </header>
+
+    <div style="display: flex; flex-direction: column">
+        <h3 id="timeCounter" style="margin-bottom: 15px"></h3>
+        <button onclick="window.location.href = 'tasktracker.html'">Task Tracker</button>
+        <button onclick="window.location.href = 'flashcard.html'">Flash Card</button>
+        <button onclick="window.location.href = 'NES.html'">NES Emulator</button>
+        <button onclick="window.location.href = 'instruction.html'">Instructions</button>
+    </div>
+</div>
+</body>
+</html>
