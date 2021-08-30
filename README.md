@@ -1,5 +1,4 @@
-# 7WCWeek3
-
+# Retro Tasker
 This is a web app that help students to be more productive.
 
 It has a task tracker which reward students for doing task on time.
